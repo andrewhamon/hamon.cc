@@ -6,6 +6,363 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.ico">
   <title>Resume - Andrew Hamon</title>
+  <style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline
+    }
+  
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block
+    }
+  
+    body {
+      line-height: 1
+    }
+  
+    ol,
+    ul {
+      list-style: none
+    }
+  
+    blockquote,
+    q {
+      quotes: none
+    }
+  
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none
+    }
+  
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+  </style>
+  
+  <style>
+    body {
+      color: #444;
+      font-family: "Palatino Linotype", Palatino, serif;
+      font-size: 16px;
+      line-height: 1.4;
+      margin: 0 auto;
+    }
+  
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1em 0.5em;
+    }
+  
+    h1 {
+      font-size: 32px;
+      margin-bottom: 0.5em;
+    }
+  
+    h1 .tagline {
+      display: block;
+      font-size: 16px;
+    }
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+  
+    section {
+      margin-bottom: 2em;
+    }
+  
+    .grid.row {
+      display: flex;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  
+    .grid.item.left {
+      flex: 1;
+      margin-right: 16px;
+    }
+  
+    .grid.item.right {
+      flex: 3;
+    }
+  
+    .about {
+      margin-bottom: 1em;
+    }
+  
+    address>dl {
+      margin-top: 4px;
+    }
+  
+    dt {
+      font-size: 18px;
+    }
+  
+    dd {
+      font-size: 14px;
+      margin-bottom: 0.75em;
+    }
+  
+    dd a {
+      text-decoration: none;
+      color: #47525d;
+    }
+  
+    h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  
+  
+    h2::before {
+      display: block;
+      content: "";
+      border-top: 1px solid #444;
+      flex: 1;
+      box-sizing: border-box;
+      margin-right: 16px;
+    }
+  
+    h2>span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 3;
+    }
+  
+    h2>span::after {
+      display: block;
+      content: "";
+      border-top: 1px solid #444;
+      flex-grow: 1;
+      margin-left: 16px;
+    }
+  
+    h2.centered>span {
+      flex: 0;
+    }
+  
+    h2.centered::after {
+      display: block;
+      content: "";
+      border-top: 1px solid #444;
+      flex: 1;
+      box-sizing: border-box;
+      margin-left: 16px;
+    }
+  
+    h2.centered>span::after {
+      display: none;
+    }
+  
+  
+    .info {
+      font-size: 14px;
+      margin-bottom: 0.5em;
+    }
+  
+    .info .title,
+    .info .institution {
+      text-align: left;
+      font-size: 18px;
+    }
+  
+    .info>span {
+      display: block;
+    }
+  
+    .description ul {
+      list-style-type: square;
+      margin-left: 1em;
+    }
+  
+    .description p {
+      margin-bottom: 0.5em;
+    }
+  
+    ul.buzzwords {
+      text-align: center;
+    }
+  
+    ul.buzzwords li {
+      list-style: none;
+      display: inline;
+      white-space: nowrap;
+    }
+  
+    ul.buzzwords li:after {
+      content: " • ";
+    }
+  
+    ul.buzzwords li.nobullet:after {
+      content: none;
+    }
+  
+    ul.buzzwords li:last-child:after {
+      content: none;
+    }
+  
+  
+    @media screen and (max-width: 640px) {
+      h1 {
+        text-align: center;
+      }
+  
+      .grid.row {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 1em;
+      }
+  
+      .grid.item.left {
+        flex: 1;
+        margin-right: 0px;
+      }
+  
+      .grid.item.right {
+        flex: 1;
+      }
+  
+      address {
+        order: 2;
+      }
+  
+      h2>span {
+        flex: 0;
+      }
+  
+      h2::after {
+        display: block;
+        content: "";
+        border-top: 1px solid #444;
+        flex: 1;
+        box-sizing: border-box;
+        margin-left: 16px;
+      }
+  
+      h2>span::after {
+        display: none;
+      }
+  
+      .info {
+        text-align: center;
+  
+      }
+  
+      .info .title,
+      .info .institution {
+        text-align: center;
+      }
+  
+      address {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body onresize="processBullets()" onload="processBullets()">
 <main>
@@ -16,7 +373,7 @@
         <dd><a href="https://github.com/andrewhamon">@andrewhamon</a></dd>
 
         <dt>Email</dt>
-        <dd><a href="mailto:andrew@hamon.cc">andrew@hamon.cc</a></dd>
+        <dd><a href="mailto:and.ham95@gmail.com">and.ham95@gmail.com</a></dd>
 
         <dt>Mobile</dt>
         <dd><a href="tel:850-960-1646">(850) 960-1646</a></dd>
@@ -24,10 +381,14 @@
 
     </address>
     <div class="about grid item right">
-      <h1>Andrew Hamon <span class="tagline">Full Stack &amp; Distributed Systems</span></h1>
+      <h1>Andrew Hamon <span class="tagline">Full Stack Software Engineer</span></h1>
 
       <p>
-        Currently seeking opportunities in the Bay Area, Andrew loves digging in to complex, nuanced problems and is most at home working on the back end, but his experience runs the gamut.
+        Currently living in San Francisco, Andrew is a Rubyist at heart and
+        loves building platform tools and products that make other developers'
+        lives easier. He has a keen interest in scalability both in
+        terms of performance, and, perhaps more importantly, in terms of scaling
+        code and development processes to many developers.
       </p>
     </div>
   </header>
@@ -37,23 +398,17 @@
     <ul class="buzzwords">
       <li>Ruby</li>
       <li>Rails</li>
-      <li>Python</li>
-      <li>Go/Golang</li>
-      <li>Chef</li>
-      <li>Terraform</li>
       <li>JavaScript</li>
       <li>React</li>
-      <li>Redux</li>
-      <li>Webpack</li>
-      <li>CSS (SASS, LESS, Stylus)</li>
-      <li>Docker</li>
+      <li>Flow</li>
+      <li>TypeScript</li>
+      <li>Python</li>
+      <li>Go/Golang</li>
       <li>PostgreSQL</li>
       <li>Redis</li>
       <li>Nginx</li>
       <li>OpenResty</li>
       <li>Haproxy</li>
-      <li>Git</li>
-      <!-- <li>Bash</li> -->
     </ul>
   </section>
 
@@ -61,10 +416,31 @@
     <h2><span>Experience</span></h2>
     <div class="grid row">
       <div class="grid item left job info">
+        <span class="title">Senior Software Engineer</span>
+        <span class="employer">Flexport</span>
+        <span class="location">San Francisco</span>
+        <span class="duration">May 2018 &ndash; present</span>
+      </div>
+
+      <div class="grid item right job description">
+        <ul>
+          <li>Consolidated several divergent messaging products into a single,
+          unified, easy to use messaging platform</li>
+          <li>Led the effort on a task management and time-to-serve measurement engine, giving crucial
+          insights to the business</li>
+          <li>Based on the success of said task management system, led a broader
+          effort to instrument and attribute time-to-serve throughout the
+          product</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid row">
+      <div class="grid item left job info">
         <span class="title">Software Engineer</span>
         <span class="employer">Compose, an IBM Company</span>
         <span class="location">Remote</span>
-        <span class="duration">December 2016 &ndash; present</span>
+        <span class="duration">December 2016 &ndash; May 2018</span>
       </div>
 
       <div class="grid item right job description">
@@ -91,7 +467,7 @@
           <li>Lead the transition from Parse based backends to custom APIs and established the company as a Rails shop</li>
           <li>Built and deployed a telecare video conferencing app for Orlando's leading healthcare provider, using Rails, React, Redux, and Docker</li>
           <li>Built and deployed the API for a political engagement and advertising platform using Rails</li>
-          <li>Gathered requirements from and interacted with our clientele during the full Agile software development lifecycle.</li>
+          <li>Gathered requirements from and interacted with our clientele during the full Agile software development lifecycle</li>
         </ul>
       </div>
     </div>
@@ -134,7 +510,8 @@
     </div>
   </section>
 
-<!--   <section>
+  <!-- I dropped out of college.
+  <section>
     <h2><span>Education</span></h2>
 
     <div class="grid row">
@@ -170,217 +547,5 @@ function processBullets () {
   })
 }
 </script>
-
-<style>
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
-</style>
-
-<style>
-body {
-  color: #444;
-  font-family: "Palatino Linotype", Palatino, serif;
-  font-size: 16px;
-  line-height: 1.4;
-  margin: 0 auto;
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1em 0.5em;
-}
-
-h1 {
-  font-size: 32px;
-  margin-bottom: 0.5em;
-}
-
-h1 .tagline {
-  display: block;
-  font-size: 16px;
-}
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-section {
-  margin-bottom: 2em;
-}
-
-.grid.row {
-  display: flex;
-  width: 100%;
-  margin-bottom: 1em;
-}
-
-.grid.item.left {
-  flex: 1;
-  margin-right: 16px;
-}
-
-.grid.item.right {
-  flex: 3;
-}
-
-.about {
-  margin-bottom: 1em;
-}
-
-address > dl {
-  margin-top: 4px;
-}
-
-dt {
-  font-size: 18px;
-}
-
-dd {
-  font-size: 14px;
-  margin-bottom: 0.75em;
-}
-
-dd a {
-  text-decoration: none;
-  color: #47525d;
-}
-
-h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-
-h2::before {
-  display: block;
-  content: "";
-  border-top: 1px solid #444;
-  flex: 1;
-  box-sizing: border-box;
-  margin-right: 16px;
-}
-
-h2 > span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 3;
-}
-
-h2 > span::after {
-  display: block;
-  content: "";
-  border-top: 1px solid #444;
-  flex-grow: 1;
-  margin-left: 16px;
-}
-
-h2.centered > span {
-  flex: 0;
-}
-
-h2.centered::after {
-  display: block;
-  content: "";
-  border-top: 1px solid #444;
-  flex: 1;
-  box-sizing: border-box;
-  margin-left: 16px;
-}
-
-h2.centered > span::after {
-  display: none;
-}
-
-
-.info {
-  font-size: 14px;
-  margin-bottom: 0.5em;
-}
-
-.info .title, .info .institution {
-  text-align: left;
-  font-size: 18px;
-}
-
-.info > span {
-  display: block;
-}
-
-.description ul {
-  list-style-type: square;
-  margin-left: 1em;
-}
-
-.description p {
-  margin-bottom: 0.5em;
-}
-
-ul.buzzwords { text-align: center; }
-ul.buzzwords li { list-style: none; display: inline; white-space: nowrap; }
-ul.buzzwords li:after { content: " • "; }
-ul.buzzwords li.nobullet:after { content: none; }
-ul.buzzwords li:last-child:after { content: none; }
-
-
-@media screen and (max-width: 640px) {
-  h1 {
-    text-align: center;
-  }
-
-  .grid.row {
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .grid.item.left {
-    flex: 1;
-    margin-right: 0px;
-  }
-
-  .grid.item.right {
-    flex: 1;
-  }
-
-  address {
-    order: 2;
-  }
-
-  h2 > span {
-    flex: 0;
-  }
-
-  h2::after {
-    display: block;
-    content: "";
-    border-top: 1px solid #444;
-    flex: 1;
-    box-sizing: border-box;
-    margin-left: 16px;
-  }
-
-  h2 > span::after {
-    display: none;
-  }
-
-  .info {
-    text-align: center;
-
-  }
-
-  .info .title, .info .institution {
-    text-align: center;
-  }
-
-  address {
-    text-align: center;
-  }
-}
-</style>
 </body>
 </html>
